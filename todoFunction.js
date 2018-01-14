@@ -5,12 +5,12 @@ function addListItem(item, listItems) {
 
 module.exports = addListItem
 
-function removeListItem(index) {
+function removeListItem(index, listItems) {
   listItems.splice(index, listItems, 1)
   renderArray();
 }
 
-function shiftUpItem(index) {
+function shiftUpItem(index, listItems) {
   if(!index) {
     return null;
   } else {
@@ -20,7 +20,7 @@ function shiftUpItem(index) {
   }
 }
 
-function shiftDownItem(index) {
+function shiftDownItem(index, listItems) {
   if(index >= listItems.length -1) {
     return null;
   } else {
@@ -30,13 +30,13 @@ function shiftDownItem(index) {
   }
 }
 
-function completeItem(index) {
+function completeItem(index, listItems) {
   listItems[index].completed = !listItems[index].completed;
   console.log(listItems[index].completed)
   renderArray();
 }
 
-function renderArray() {
+function renderArray(listItems) {
   $('tbody').remove();
   $('table').append('<tbody></tbody>')
   listItems.map(function(listItem, index){
@@ -56,7 +56,7 @@ function renderArray() {
         </td>
       </tr>`
     )
-  }).forEach(function(item, index){
+  }).forEach(function(item, index, listItems){
         $('tbody').append(item);
         $(`#btn_delete_${index}`).on('click', function(e){
           console.log('delete has been clicked')
