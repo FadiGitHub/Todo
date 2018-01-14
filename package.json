@@ -1,0 +1,19 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "todoNpm",
+  "main": "todo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FadiGitHub/Todo.git"
+  },
+  "author": "Fahad Shahid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FadiGitHub/Todo/issues"
+  },
+  "homepage": "https://github.com/FadiGitHub/Todo#readme"
+}
